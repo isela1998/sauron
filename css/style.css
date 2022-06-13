@@ -1,0 +1,924 @@
+/* SAURON, SSS.
+   Creado: Agosto 2020
+   Descripción: Archivo CSS
+*/
+
+/*****************************************
+CONTENIDO
+
+01. ESTILOS GENERALES
+02. PRELOADER
+03. NAVBAR
+04. HEADER
+05. ¿QUIÉNES SOMOS?
+06. PLANES Y KIT DE INSTALACIÓN 
+07. DETALLE DE PLANES 
+08. SOLICITAR SERVICIO 
+09. UBICACIÓN Y CONTACTO 
+10. FOOTER Y COPYRIGHT
+11. BOTÓN INICIO
+12. MEDIA QUERIES
+******************************************/
+
+/* *********************** */
+/** 01. ESTILOS GENERALES **/
+/* *********************** */
+a {
+  text-decoration: none !important;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins";
+}
+
+div.division {
+  text-align: center;
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 50px !important;
+}
+
+div.division:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100px;
+  margin-left: -40px;
+  height: 4px;
+  background: #2269c5;
+}
+
+.p_text {
+  font-family: "Poppins", initial;
+  color: black;
+}
+
+.text_H3 {
+  font: 400 1rem/1.75rem "Poppins", sans-serif;
+  font-size: 22px;
+  text-align: center;
+  color: #fff;
+  background-color: #111;
+}
+
+h3.textH3 {
+  font-family: "Poppins";
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: black;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* ***************** */
+/*** 02. PRELOADER ***/
+/* ***************** */
+.spinner-wrapper {
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #141444;
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3.75rem;
+  height: 1.25rem;
+  margin: -0.625rem 0 0 -1.875rem;
+  text-align: center;
+}
+
+.spinner > div {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  background-color: #fff;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+/* ****************** */
+/***** 03. NAVBAR *****/
+/* ****************** */
+.navbar-custom {
+  background-color: #0f0a3c;
+  box-shadow: 0 8px 4px 0 rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+  font: 600 0.75rem/2rem "Poppins", sans-serif;
+  transition: all 0.2s ease;
+}
+
+.navbar-custom .navbar-brand.logo-sauron img {
+  width: 130px;
+  height: 60px;
+  margin-bottom: 1px;
+  margin-left: 15px;
+}
+
+a.focusNone {
+  cursor: default;
+}
+
+.navbar-custom .nav-item .nav-link {
+  padding: 0 0.75rem 0 0.75rem;
+  color: rgb(224, 221, 221);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.navbar-custom .nav-item .nav-link:hover,
+.navbar-custom .nav-item .nav-link.active {
+  color: #03baca;
+}
+
+.navbar-custom .dropdown:hover > .dropdown-menu {
+  display: block;
+  min-width: auto;
+  animation: fadeDropdown 0.2s;
+}
+
+.navbar-custom .dropdown-menu {
+  margin-top: 0;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: rgba(31, 20, 73, 0.5);
+}
+
+.navbar-custom .dropdown-toggle:focus {
+  outline: 0;
+}
+
+.navbar-custom .navbar-nav {
+  margin-top: 0.75rem;
+}
+
+.navbar-custom .dropdown-item {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-custom .dropdown-item:hover {
+  background-color: #443791;
+}
+
+.navbar-custom .dropdown-item .item-text {
+  font: 700 0.75rem/1.5rem "Poppins", sans-serif;
+}
+
+.navbar-custom .dropdown-item:hover .item-text {
+  color: #00c9db;
+}
+
+.navbar-custom .dropdown-items-divide-hr {
+  width: 100%;
+  height: 1px;
+  margin: 0.25rem auto 0.25rem auto;
+  border: none;
+  background-color: #fff;
+  opacity: 0.2;
+}
+
+/* ****************** */
+/***** 04. HEADER *****/
+/* ****************** */
+.header {
+  width: 100%;
+  background-image: url("../img/back2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.header .header-content {
+  padding-top: 12rem;
+  padding-bottom: 4rem;
+  text-align: left;
+  height: 600px;
+}
+
+.header .text-container {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: fit-content;
+  height: max-content;
+  padding: 10px;
+}
+
+.header #textoRotativo {
+  color: orange;
+}
+
+.header .msg1 {
+  margin-bottom: 2rem;
+  color: #fff;
+  font: 700 1rem "Poppins", sans-serif;
+  text-align: justify;
+}
+
+.text-container h1 {
+  color: #fff;
+  font: 600 2.5rem/1.2em "Poppins", sans-serif;
+  letter-spacing: 1px;
+}
+
+span.msg1 {
+  font: 400 1rem "Poppins", sans-serif;
+}
+
+a.btn1 {
+  color: #fff;
+  font: 14px "Poppins", sans-serif;
+  background-color: #111;
+  box-shadow: 0 8px 5px 0 rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  text-decoration: none;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+a.btn1:hover {
+  box-shadow: 0 9px 6px 0 rgba(0, 0, 0, 0.5);
+  background-color: #1a7171;
+}
+
+div.barra-nosotros {
+  background-color: #191923;
+  padding: 5px;
+}
+
+/* ************************ */
+/*** 05. ¿QUIENES SOMOS?  ***/
+/* ************************ */
+section.nosotros-kit {
+  background-image: url("../img/back-white.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.nosotros-sss-p {
+  text-align: center;
+  font-size: 16px;
+}
+
+.slider-1 {
+  padding-top: 7rem;
+  padding-bottom: 2rem;
+  background-color: transparent;
+  font-family: "Poppins";
+  color: black;
+}
+
+.slider-1 .container-slider {
+  position: relative;
+}
+
+.slider-1 .swiper-container {
+  position: static;
+  width: 90%;
+  text-align: center;
+  padding-bottom: 3.5rem;
+  padding-top: 1rem;
+}
+
+.slider-1 .swiper-button-prev:focus,
+.slider-1 .swiper-button-next:focus {
+  outline: none;
+}
+
+.slider-1 .swiper-button-prev {
+  left: -0.5rem;
+  background-size: 125rem 1.75rem;
+}
+
+.slider-1 .swiper-button-next {
+  right: -0.5rem;
+  background-size: 125rem 1.75rem;
+}
+
+.slider-1 .card {
+  position: relative;
+  border: none;
+  background-color: #e1e2e4;
+  height: 405px;
+  margin-bottom: 20px;
+}
+
+div.acerca-de-sauron {
+  background: #fff;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+div.acerca-de-sauron .img {
+  position: relative;
+}
+
+div.acerca-de-sauron .img img {
+  border-radius: 4px 4px 0 0;
+}
+
+div.acerca-de-sauron p {
+  font: 500 14px "Poppins";
+  line-height: 22px;
+  color: #333;
+  margin-bottom: 0;
+  padding: 0 20px 20px 20px;
+  text-align: justify;
+}
+
+.iconSlider {
+  font-size: 18px;
+  color: #fff;
+}
+
+/* ******************************* */
+/* 06. PLANES Y KIT DE INSTALACIÓN */
+/* ******************************* */
+div.cont-servicios {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-image: url("../img/sky2.jpg");
+  background-attachment: fixed;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 3rem;
+  padding-top: 4rem;
+}
+
+div.cont-plans {
+  display: flex;
+  justify-content: center;
+  padding: 0 !important;
+  margin-top: 1.5rem;
+}
+
+div.t-planes {
+  width: 420px;
+  height: 710px;
+  background-image: url(../img/lago1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+div.t-planes:hover {
+  background-image: url("../img/plan.jpg");
+  background-repeat: no-repeat;
+  -webkit-transition: 0.7s linear;
+  -ms-transition: 0.7s linear;
+  transition: 0.7s linear;
+}
+
+div.t-planes a {
+  position: absolute;
+  font-weight: 500;
+  color: white;
+  bottom: 1em;
+  background-color: #124c11;
+  text-decoration: none;
+  padding: 0.4rem 0.4rem;
+}
+
+div.t-planes a:hover {
+  background-color: #20a11e;
+  color: black;
+}
+
+div.cont-kit {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 720px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0px 40px 40px 40px;
+}
+
+.cont-kit h3 {
+  font-family: "Poppins";
+  font-size: 45px;
+  line-height: 1em;
+  font-weight: 800;
+  letter-spacing: -1px;
+  text-align: left;
+  color: black;
+  margin-top: 2.5rem;
+  padding-top: 3rem;
+}
+
+.cont-kit p {
+  font-family: "Poppins";
+  font-size: 20px;
+  text-align: center;
+  color: black;
+}
+
+div.descr-kit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 8rem;
+}
+
+div.descr-kit-det {
+  width: 100px;
+  height: 200px;
+}
+
+/* *********************** */
+/** 07. DETALLE DE PLANES **/
+/* *********************** */
+.tabs {
+  padding-top: 8rem;
+  background-color: transparent;
+  padding-bottom: 6rem;
+}
+
+div.text-page-A {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.tabs .nav-tabs {
+  margin-right: auto;
+  margin-bottom: 2.5rem;
+  margin-left: auto;
+  justify-content: center;
+  border-bottom: none;
+}
+
+.tabs .nav-link {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1.375rem 0.25rem 1.375rem;
+  border: none;
+  border-bottom: 0.1875rem solid black;
+  border-radius: 0;
+  color: black;
+  font: 700 1rem/1.75rem "Poppins", sans-serif;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.tabs .nav-link.active,
+.tabs .nav-link:hover {
+  border-bottom: 0.1875rem solid #d07c00;
+  background-color: transparent;
+  color: #d07c00;
+}
+
+.img-details-planes {
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.infoPlan {
+  padding: 15px;
+  border-radius: 15px;
+  height: 150px;
+  margin-bottom: 1.5em;
+}
+
+.icon-info-plan {
+  font-size: 20px;
+  color: white;
+  background-color: #141444;
+  border-radius: 100%;
+  padding: 15px;
+  margin-right: 10px;
+}
+
+.text-info-plan {
+  font-family: "Poppins", initial;
+  color: black;
+}
+
+#animate-sauron {
+  width: 100%;
+  display: block !important;
+}
+
+#animate-sauron .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+/* ************************** */
+/*** 08. SOLICITAR SERVICIO ***/
+/* ************************** */
+div.slider-2 {
+  background-image: url("../img/sauron-antena-out.jpg");
+  background-attachment: fixed;
+  padding-top: 4rem;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 6rem;
+}
+
+.slider-2 .slider-container {
+  position: relative;
+  padding-bottom: 4rem;
+  padding-top: 1.5rem;
+}
+
+.slider-2 .swiper-container {
+  position: static;
+  width: 90%;
+  text-align: center;
+  padding-bottom: 3.5rem;
+  padding-top: 1rem;
+}
+
+.slider-2 .swiper-container {
+  position: static;
+  width: 90%;
+  text-align: center;
+}
+
+.slider-2 .swiper-button-prev,
+.slider-2 .swiper-button-next {
+  top: 50%;
+  width: 2rem;
+}
+
+.slider-2 .swiper-button-prev:focus,
+.slider-2 .swiper-button-next:focus {
+  outline: none;
+}
+
+.text_H4 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgb(255 255 255);
+  padding-top: 4.25rem;
+  text-shadow: 0.05em 0.05em #111;
+}
+
+div.infoSolicitud {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+div.inputInfoSolicitud {
+  margin: 20px;
+}
+
+div.btn-solicitud {
+  display: flex;
+  justify-content: center;
+}
+
+.form-control {
+  box-shadow: 0 8px 5px 0 rgba(0, 0, 0, 0.5) !important;
+}
+
+button.solicitud-sss {
+  color: #fff;
+  font: 500 1rem "Poppins", sans-serif;
+  background-color: #111;
+  box-shadow: 0 8px 5px 0 rgba(0, 0, 0, 0.5);
+  padding: 8px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+button.solicitud-sss:hover {
+  box-shadow: 0 9px 6px 0 rgba(0, 0, 0, 0.5);
+  background-color: #1f8e8e;
+}
+
+.box-view-sauron {
+  position: relative;
+  width: fit-content;
+  margin: 2rem auto;
+  padding: 3rem 1rem;
+  background-color: #fff;
+}
+
+.box-view-sauron img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.box-view-sauron button.mfp-close.x-button {
+  position: absolute;
+  top: -0.475rem;
+  right: -0.375rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  color: #111;
+}
+
+/* **************************** */
+/*** 09. UBICACIÓN Y CONTACTO ***/
+/* **************************** */
+div.ubicacion {
+  padding-bottom: 1em;
+  padding-top: 7em;
+}
+
+div.cont-ubicacion {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.map-google {
+  width: 60vw;
+  border-radius: 10px;
+}
+
+div.contact {
+  padding: 5px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  padding: 1rem;
+}
+
+/* ************************ */
+/** 10. FOOTER Y COPYRIGHT **/
+/* ************************ */
+
+footer {
+  width: 100%;
+  height: 60px;
+  background: #111;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(216, 218, 216);
+}
+
+div.infoFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.acerca-de {
+  width: 350px;
+  color: rgb(143, 156, 158);
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.social {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.social .fa-stack {
+  margin-bottom: 0.75rem;
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+.icon-stack{
+    padding: 15px;
+    background-color: #e1e2e4;
+    color: #111;
+    text-align: center;
+    border-radius: 30px 30px 30px 1px;
+}
+
+.icon-stack:hover{
+  background-color: #00c9db;
+  color: #f1f1f8;
+}
+
+.acerca-de-contact {
+  width: 250px;
+  color: rgb(143, 156, 158);
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  font-size: 15px;
+  text-align: justify;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+img.iconWs {
+  height: 50px;
+}
+
+.footer {
+  width: 100%;
+  background-color: rgb(23, 23, 41);
+}
+
+.pCopyright {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* *********************** */
+/* 11. BOTON VOLVER INICIO */
+/* *********************** */
+a.back-to-top {
+  position: fixed;
+  z-index: 999;
+  right: 20px;
+  bottom: 5rem;
+  display: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: #141444 url("../img/up-arrow.png") no-repeat center 47%;
+  background-size: 1.5rem 1.5rem;
+  text-indent: -9999px;
+}
+
+a:hover.back-to-top {
+  background-color: #1e3cc0;
+}
+
+
+/* *********************** */
+/** 10. CSS MEDIA QUERIES **/
+/* *********************** */
+
+@media screen and (max-width: 1250px) {
+  div.t-planes {
+    width: 390px;
+    height: 680px;
+  }
+
+  div.t-planes a {
+    bottom: 1.5em;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  div.t-planes {
+    width: 340px;
+    height: 670px;
+  }
+
+  div.t-planes a {
+    bottom: 2.2em;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  div.t-planes {
+    width: 420px;
+    height: 710px;
+  }
+
+  div.t-planes a {
+    bottom: 1em;
+  }
+}
+
+@media screen and (max-width: 635px) {
+  div.t-planes {
+    width: 400px;
+    height: 625px;
+  }
+
+  div.t-planes:hover {
+    width: 400px;
+    height: 625px;
+    transition: none;
+    -webkit-transition: none;
+    -ms-transition:none;
+  }
+
+  div.t-planes a {
+    bottom: 1em;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  div.t-planes {
+    width: 365px;
+    height: 655px;
+  }
+
+  div.t-planes:hover {
+
+    transition: none;
+    -webkit-transition: none;
+    -ms-transition:none;
+  }
+
+
+  div.t-planes a {
+    bottom: 1em;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  div.t-planes {
+    width: 340px;
+    height: 630px;
+  }
+
+  div.t-planes:hover {
+    transition: none;
+    -webkit-transition: none;
+    -ms-transition:none;
+  }
+
+  div.t-planes a {
+    bottom: 1em;
+  }
+}
